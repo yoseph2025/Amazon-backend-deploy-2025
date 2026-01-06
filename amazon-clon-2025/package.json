@@ -1,15 +1,14 @@
 {
-  "homepage": "https://yoseph2025.github.io/Amazon-backend-deploy-2025/",
+  "homepage": "https://yoseph2025.github.io/Amazon-backend-deploy-2025",
   "name": "amazon-clon-2025",
   "private": true,
   "version": "0.0.0",
   "type": "module",
- "scripts": {
-  "build": "vite build",
-  "predeploy": "npm run build",
-  "deploy": "gh-pages -d dist"
-}
-,
+  "scripts": {
+    "build": "vite build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
+  },
   "dependencies": {
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.1",
