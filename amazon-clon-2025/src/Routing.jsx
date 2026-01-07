@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Landing from "./Pages/Landing/Landing";
 import Auth from "./Pages/Auth/Auth";
 import Order from "./Pages/Orders/Order";
@@ -17,26 +17,24 @@ const stripePromise = loadStripe(
 
 const Routing = () => {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Landing />} />
-        <Route path="/auth" element={<Auth />} />
-        <Route
-          path="/payments"
-          element={
-            <ProtectedRoute msg="You must log in to pay" redirect="/payments">
-              <Elements stripe={stripePromise}>
-                <Payment />
-              </Elements>
-            </ProtectedRoute>
-          }
-        />
-        <Route path="/orders" element={<Order />} />
-        <Route path="/category/:categoryName" element={<Results />} />
-        <Route path="/product/:productId" element={<ProductDetail />} />
-        <Route path="/cart" element={<Cart />} />
-      </Routes>
-    </Router>
+    <Routes>
+      <Route path="/" element={<Landing />} />
+      <Route path="/auth" element={<Auth />} />
+      <Route
+        path="/payments"
+        element={
+          <ProtectedRoute msg="You must log in to pay" redirect="/payments">
+            <Elements stripe={stripePromise}>
+              <Payment />
+            </Elements>
+          </ProtectedRoute>
+        }
+      />
+      <Route path="/orders" element={<Order />} />
+      <Route path="/category/:categoryName" element={<Results />} />
+      <Route path="/product/:productId" element={<ProductDetail />} />
+      <Route path="/cart" element={<Cart />} />
+    </Routes>
   );
 };
 
