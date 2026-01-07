@@ -1,9 +1,9 @@
 {
-  "homepage": "https://yoseph2025.github.io/Amazon-backend-deploy-2025",
   "name": "amazon-clon-2025",
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://yoseph2025.github.io/Amazon-backend-deploy-2025",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
